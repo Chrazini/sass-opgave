@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap");
+:root {
+  font-size: 10px;
+  --frame-height: 100vh;
+  --frame-width: 100vw;
+  --article-spacing: 4rem; }
+  @media (min-width: 1080px) {
+    :root {
+      font-size: 12px;
+      --frame-height: 720px;
+      --frame-width: 1080px; } }
+  @media (min-width: 1080px) and (min-width: 2048px) {
+    :root {
+      font-size: 16px;
+      --frame-height: 1080px;
+      --frame-width: 1420px; } }
+
+/* Keyframes */
+@-webkit-keyframes menu-fade {
+  0% {
+    -webkit-transform: translateY(64px);
+    transform: translateY(64px);
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+@keyframes menu-fade {
+  0% {
+    -webkit-transform: translateY(64px);
+    transform: translateY(64px);
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: var(--frame-width);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto; }
+
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #EDF1F7;
+  text-transform: uppercase;
+  letter-spacing: 1.25rem;
+  text-align: center;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: initial;
+  bottom: initial;
+  height: 8rem;
+  background-color: #27416D;
+  color: #EDF1F7; }
+  h1 + ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #1a2b47;
+    margin-top: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: initial;
+    bottom: initial; }
+    h1 + ul li {
+      margin: 1rem; }
+      h1 + ul li:nth-child(1) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 250ms;
+        animation-duration: 250ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li:nth-child(2) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 500ms;
+        animation-duration: 500ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li:nth-child(3) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 750ms;
+        animation-duration: 750ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li:nth-child(4) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li:nth-child(5) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 1250ms;
+        animation-duration: 1250ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li:nth-child(6) a {
+        -webkit-animation-name: menu-fade;
+        animation-name: menu-fade;
+        -webkit-animation-duration: 1500ms;
+        animation-duration: 1500ms;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s; }
+      h1 + ul li a {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #EDF1F7;
+        text-transform: none;
+        letter-spacing: normal;
+        text-align: center;
+        opacity: 0;
+        overflow-x: hidden; }
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #27416D;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 15.5rem; }
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #27416D;
+  text-transform: normal;
+  letter-spacing: 0.1rem;
+  text-align: center; }
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #27416D;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 2rem; }
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #27416D;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+
+figure {
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60%; }
+  figure:last-of-type {
+    margin-bottom: 8rem; }
+  figure img {
+    width: 30rem;
+    margin-right: 2rem; }
+  figure figcaption {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #27416D;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    text-align: center;
+    text-align: left !important; }
+  figure + p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: initial;
+    left: 0;
+    right: initial;
+    bottom: 0;
+    color: #EDF1F7;
+    width: 100vw;
+    height: 2rem;
+    background-color: #1a2b47;
+    margin-bottom: 3rem; }
+    figure + p + ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: fixed;
+      top: initial;
+      left: 0;
+      right: initial;
+      bottom: 0;
+      width: 100vw;
+      height: 3rem;
+      background-color: #1a2b47; }
+      figure + p + ul li {
+        margin: 1rem; }
+        figure + p + ul li:nth-child(1) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li:nth-child(2) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li:nth-child(3) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li:nth-child(4) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li:nth-child(5) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 1250ms;
+          animation-duration: 1250ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li:nth-child(6) a {
+          -webkit-animation-name: menu-fade;
+          animation-name: menu-fade;
+          -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+        figure + p + ul li a {
+          font-family: 'Oswald', sans-serif;
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #EDF1F7;
+          text-transform: none;
+          letter-spacing: normal;
+          text-align: center;
+          opacity: 0;
+          overflow-x: hidden; }

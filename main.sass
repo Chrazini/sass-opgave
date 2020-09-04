@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap')
+
+\:root
+	font-size: 10px
+	--frame-height: 100vh
+	--frame-width: 100vw
+	--article-spacing: 4rem
+
+	@media (min-width: 1080px)
+		font-size: 12px
+		--frame-height: 720px
+		--frame-width: 1080px
+
+		@media (min-width: 2048px)
+			font-size: 16px
+			--frame-height: 1080px
+			--frame-width: 1420px
+
+$color-white: #EDF1F7
+$color-primary: #27416D
+$color-secondary: darken($color-primary, 10%)
+
+$window-width: 100vw
+$content-width: var(--frame-width)
+
+$copyright-height: 2rem
+$reference-height: 3rem
+$footer-height: combine($copyright-height, $reference-height)
+
+@function combine($value-1, $value-2)
+	@return $value-1 + $value-2
+
+/* Keyframes */
+@keyframes menu-fade
+	0%
+		transform: translateY(64px)
+		opacity: 0
+
+	50%
+		opacity: 0
+
+	100%
+		transform: translateY(0px)
+		opacity: 1
+
+@mixin flex-center
+	display: flex
+	justify-content: center
+	align-items: center
+
+@mixin font-settings($size: 1rem, $weight: 500, $color: $color-primary, $transform: none, $spacing: normal)
+	font:
+		family: 'Oswald', sans-serif
+		size: $size
+		weight: $weight
+	color: $color
+	text-transform: $transform
+	letter-spacing: $spacing
+	text-align: center
+
+@mixin position($attribute: fixed, $top: initial, $left: initial, $right: initial, $bottom: initial)
+	position: $attribute
+	top: $top
+	left: $left
+	right: $right
+	bottom: $bottom
+
+*
+	margin: 0
+	padding: 0
+	list-style-type: none
+	text-decoration: none
+	box-sizing: border-box
+
+body
+	width: $content-width
+	display: flex
+	justify-content: center
+	flex-direction: column
+	margin: 0 auto
+
+$title-height: 8rem
+$navigation-height: 2.5rem
+$header-height: combine($title-height, $navigation-height)
+
+h1
+	@include flex-center
+	@include font-settings(5rem, 300, $color-white, uppercase, 1.25rem)
+	width: $window-width
+	@include position(fixed, 0, 0)
+
+	height: $title-height
+	background-color: $color-primary
+	color: $color-white
+
+	& + ul
+		@include flex-center
+		width: $window-width
+		background-color: $color-secondary
+		margin-top: $title-height
+		@include position(fixed, 0, 0)
+
+		li
+			margin: 1rem
+
+			@for $i from 1 through 6
+				&:nth-child(#{$i}) a
+					animation:
+						name: menu-fade
+						duration: (250ms * $i)
+						timing-function: ease-in-out
+						fill-mode: forwards
+						delay: 1s
+
+			a
+				@include font-settings(1.2rem, 600, $color-white)
+				opacity: 0
+				overflow-x: hidden
+
+h2
+	@include font-settings(3rem, 300, $color-primary, uppercase)
+	margin-top: $header-height + 5rem
+
+p
+	@include font-settings(1rem, 500, $color-primary, normal, 0.10rem)
+
+h3
+	@include font-settings(2rem, 300, $color-primary, uppercase)
+	margin-top: 2rem
+
+$color-overlay: 2
+
+h4
+	@include font-settings(1.5rem, 300, $color-primary, uppercase)
+	margin-top: 2rem
+	margin-bottom: 1rem
+
+figure
+	align-self: center
+	@include flex-center
+	width: 60%
+
+	&:last-of-type
+		margin-bottom: 8rem
+
+	img
+		width: 30rem
+		margin-right: 2rem
+
+	figcaption
+		@include font-settings(0.9rem, 300, $color-primary, uppercase)
+		text-align: left !important
+
+	& + p
+		@include flex-center
+		@include position(fixed, initial, 0, initial, 0)
+		color: $color-white
+		width: $window-width
+		height: $copyright-height
+		background-color: $color-secondary
+		margin-bottom: $reference-height
+
+		& + ul
+			@include flex-center
+			@include position(fixed, initial, 0, initial, 0)
+			width: $window-width
+			height: $reference-height
+			background-color: $color-secondary
+
+			li
+				margin: 1rem
+
+				@for $i from 1 through 6
+					&:nth-child(#{$i}) a
+						animation:
+							name: menu-fade
+							duration: (250ms * $i)
+							timing-function: ease-in-out
+							fill-mode: forwards
+							delay: 1s
+
+				a
+					@include font-settings(1.2rem, 600, $color-white)
+					opacity: 0
+					overflow-x: hidden
